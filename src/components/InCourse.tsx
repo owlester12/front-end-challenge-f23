@@ -19,7 +19,7 @@ const InCourse:React.FC<inCourseProps> = ({course, index}) =>{
     if(isPrimCart){
       dispatch(delPrimCart(course))
     } else {
-      dispatch(delPrimCart(course))
+      dispatch(delAltCart(course))
     }
   }
 

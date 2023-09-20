@@ -22,7 +22,7 @@ const TheCourse:React.FC<theCourseProps> = ({course}) => {
       if(isPrimCart){
         dispatch(delPrimCart(course))
       } else {
-        dispatch(delPrimCart(course))
+        dispatch(delAltCart(course))
       }
     }
     const addCart = (course: Course) => {
