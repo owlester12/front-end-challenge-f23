@@ -10,6 +10,7 @@ const Courses = () => {
   const {filter} = useSelector((state: RootState) => state.cart);
   const {theSearch} = useSelector((state: RootState) => state.cart)
 
+  //filters courses according to filters and search input
   const filtCourse = courses.filter(function(entry){
 
 

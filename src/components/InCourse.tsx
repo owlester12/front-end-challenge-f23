@@ -15,6 +15,8 @@ const InCourse:React.FC<inCourseProps> = ({course, index}) =>{
 
   const dispatch = useDispatch();
   const {isPrimCart} = useSelector((state: RootState) => state.cart);
+
+  //makes sure delete cart deletes from correct cart
   const delCart = (course: number) => {
     if(isPrimCart){
       dispatch(delPrimCart(course))

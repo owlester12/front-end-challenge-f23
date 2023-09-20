@@ -18,6 +18,8 @@ const TheCourse:React.FC<theCourseProps> = ({course}) => {
     const dispatch = useDispatch();
     const {primCart, isPrimCart, altCart, description} = useSelector((state: RootState) => state.cart);
     const limit = primCart.length < 7
+
+    //makes sure delete cart deletes from correct cart
     const delCart = (course: number) => {
       if(isPrimCart){
         dispatch(delPrimCart(course))
@@ -25,6 +27,8 @@ const TheCourse:React.FC<theCourseProps> = ({course}) => {
         dispatch(delAltCart(course))
       }
     }
+
+     //makes sure add cart adds to correct cart
     const addCart = (course: Course) => {
       if(isPrimCart){
         dispatch(addPrimCart(course))

@@ -19,13 +19,13 @@ const Cart = () =>{
   const [expand, setExpand] = useState(false)
   const theCart = isPrimCart ? primCart : altCart 
 
-
+  //Used when changing course carts onClcik
   const setOther = () => {
     dispatch(setIsPrimCart())
     setExpand(!expand)
   }
 
-
+  //Handles drag and drop 
   const handleOnDragEnd = (result:DropResult) => {
     if(!result.destination) return;
     const cartCopy = theCart.map((x) => x);
